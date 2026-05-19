@@ -1,13 +1,21 @@
-<input type="text" id="textInput" placeholder="Mətn daxil edin">
-<button id="showBtn">button</button>
-<p id="resultText"></p>
+<h2 id="counterDisplay">0</h2>
+<button id="increaseBtn">Artır</button>
+<button id="decreaseBtn">Azalt</button>
 
 <script>
-  const input = document.getElementById('textInput');
-  const button = document.getElementById('showBtn');
-  const pTag = document.getElementById('resultText');
+  const display = document.getElementById('counterDisplay');
+  const incBtn = document.getElementById('increaseBtn');
+  const decBtn = document.getElementById('decreaseBtn');
 
-  button.addEventListener('click', function() {
-    pTag.textContent = input.value; 
+  let count = 0; // Başlanğıc dəyər
+
+  incBtn.addEventListener('click', function() {
+    count++; // dəyəri 1 vahid artırır
+    display.textContent = count;
+  });
+
+  decBtn.addEventListener('click', function() {
+    count--; // dəyəri 1 vahid azaldır
+    display.textContent = count;
   });
 </script>
